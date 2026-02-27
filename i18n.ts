@@ -3,21 +3,29 @@ import * as Localization from 'expo-localization';
 import {initReactI18next} from 'react-i18next';
 
 import en from './locales/en.json';
-import fr from './locales/fra.json';
+import fil from './locales/fil.json';
+import ar from './locales/ara.json';
+import hi from './locales/hin.json';
+import kn from './locales/kan.json';
+import ta from './locales/tam.json';
 
 import {iso6393To1} from 'iso-639-3';
 
 import {getItem} from './machines/store';
 import {LocalizedField} from './machines/VerifiableCredential/VCMetaMachine/vc';
 
-const resources = {en, fr};
+const resources = {en, fil, ar, hi, kn, ta};
 const locale = Localization.locale;
 const languageCodeMap = {} as {[key: string]: string};
 
 export const SUPPORTED_LANGUAGES = {
   en: 'English',
-  fr: 'French'
-  };
+  fil: 'Filipino',
+  ar: 'عربى',
+  hi: 'हिंदी',
+  kn: 'ಕನ್ನಡ',
+  ta: 'தமிழ்',
+};
 
 i18next
   .use(initReactI18next)

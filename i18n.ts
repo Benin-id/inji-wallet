@@ -3,7 +3,7 @@ import * as Localization from 'expo-localization';
 import {initReactI18next} from 'react-i18next';
 
 import en from './locales/en.json';
-import fr from './locales/fra.json';
+import fr from './locales/fr.json';
 
 import {iso6393To1} from 'iso-639-3';
 

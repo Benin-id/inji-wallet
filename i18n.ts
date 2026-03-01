@@ -8,6 +8,7 @@ import ar from './locales/ara.json';
 import hi from './locales/hin.json';
 import kn from './locales/kan.json';
 import ta from './locales/tam.json';
+import fa from './locales/fr.json';
 
 import {iso6393To1} from 'iso-639-3';
 
@@ -20,11 +21,7 @@ const languageCodeMap = {} as {[key: string]: string};
 
 export const SUPPORTED_LANGUAGES = {
   en: 'English',
-  fil: 'Filipino',
-  ar: 'عربى',
-  hi: 'हिंदी',
-  kn: 'ಕನ್ನಡ',
-  ta: 'தமிழ்',
+  fr: 'Français'
 };
 
 i18next

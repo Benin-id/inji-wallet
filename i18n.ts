@@ -15,12 +15,11 @@ import {iso6393To1} from 'iso-639-3';
 import {getItem} from './machines/store';
 import {LocalizedField} from './machines/VerifiableCredential/VCMetaMachine/vc';
 
-const resources = {en, fil, ar, hi, kn, ta,fr};
+const resources = {fr};
 const locale = Localization.locale;
 const languageCodeMap = {} as {[key: string]: string};
 
 export const SUPPORTED_LANGUAGES = {
-  en: 'English',
   fr: 'Français'
 };
 

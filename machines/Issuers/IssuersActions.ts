@@ -419,7 +419,7 @@ export const IssuersActions = (model: any) => {
             timestamp: Date.now(),
             deviceName: '',
             issuer:
-              context.selectedIssuer.credential_issuer_host ??
+              context.selectedIssuer.credential_issuer_host_external ??
               context.credentialOfferCredentialIssuer,
             credentialConfigurationId: context.selectedCredentialType.id,
           }),

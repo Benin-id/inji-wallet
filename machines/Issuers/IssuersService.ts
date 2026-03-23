@@ -32,13 +32,13 @@ export const IssuersService = () => {
     downloadIssuerWellknown: async (context: any) => {
       const wellknownResponse =
         (await VciClient.getInstance().getIssuerMetadata(
-          context.selectedIssuer.credential_issuer_host,
+          context.selectedIssuer.credential_issuer_host_external,
         )) as issuerType;
       if (wellknownResponse) {
         const wellknownCacheObject = createCacheObject(wellknownResponse);
         await setItem(
           API_CACHED_STORAGE_KEYS.fetchIssuerWellknownConfig(
-            context.selectedIssuer.credential_issuer_host,
+            context.selectedIssuer.credential_issuer_host_external,
           ),
           wellknownCacheObject,
           '',
@@ -99,7 +99,7 @@ export const IssuersService = () => {
       };
       const {credential} =
         await VciClient.getInstance().requestCredentialFromTrustedIssuer(
-          context.selectedIssuer.credential_issuer_host,
+          context.selectedIssuer.credential_issuer_host_external,
           context.selectedCredentialType.id,
           {
             clientId: context.selectedIssuer.client_id,
@@ -271,7 +271,7 @@ export const IssuersService = () => {
       const proofJWT = await constructProofJWT(
         context.publicKey,
         context.privateKey,
-        context.selectedIssuer.credential_issuer_host,
+        context.selectedIssuer.credential_issuer_host_external,
         context.selectedIssuer.client_id,
         context.keyType,
         context.wellknownKeyTypes,

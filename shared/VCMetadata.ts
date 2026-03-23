@@ -130,7 +130,7 @@ export function parseMetadatas(metadataStrings: object[]) {
 
 export const getVCMetadata = (context: object, keyType: string) => {
   const issuerHost =
-    context.selectedIssuer.credential_issuer_host ??
+    context.selectedIssuer.credential_issuer_host_external??
     context.selectedIssuer.credential_issuer;
   const issuer =
     context.selectedIssuer.issuer_id ??

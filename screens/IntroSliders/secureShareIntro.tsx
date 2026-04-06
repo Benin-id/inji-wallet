@@ -53,7 +53,7 @@ export const StaticSendVcScreen: React.FC = () => {
                     testID="issuerName" 
                     color={Theme.Colors.GrayText} 
                     size="smaller">
-                    Philippines Government
+                    Gouvernement du Bénin
                 </Text>
             </Row>
             <Divider width={1}></Divider>
@@ -69,7 +69,7 @@ export const StaticSendVcScreen: React.FC = () => {
                     testID="requestMessage" 
                     color="#8B6105" 
                     size="small">
-                    {'<Philippines Govt.>'} {t('SendVcScreen:requestMessage')}
+                    {'<Gouvernement du Bénin.>'} {t('SendVcScreen:requestMessage')}
                     {'<Self-Authentication>'}.
                 </Text>
             </Column>
